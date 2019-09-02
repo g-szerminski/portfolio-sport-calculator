@@ -10,11 +10,18 @@ body {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 20%;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 15%;
   width: 100%;
+}
+nav h1 {
+  text-transform: uppercase;
+  font-size: 250%;
+  color: #fff;
+  text-align: center;
+  transform: translateY(50%);
 }
 
 .main {
@@ -25,7 +32,7 @@ nav {
   background-size: cover;
   background-position: center;
   /* filter: blur(2px); */
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 footer {
