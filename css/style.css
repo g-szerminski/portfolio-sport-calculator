@@ -6,22 +6,36 @@
 body {
   background-color: #555;
   font-family: arial, sans-serif;
-  height: 300vh;
+  height: 100vh;
 }
 
-nav {
+header {
   position: fixed;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.9);
   height: 15%;
+  min-height: 80px;
   width: 100%;
 }
-nav h1 {
+
+header h1 {
+  position: relative;
   text-transform: uppercase;
-  font-size: 250%;
+  font-size: 200%;
   color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  transform: translateY(50%);
+}
+
+header h1 p:nth-child(1) {
+  animation: textUnderline 3s forwards;
+  margin-left: -150%;
+}
+header h1 p:nth-child(2) {
+  animation: textUnderline 3s forwards;
+  margin-left: +150%;
 }
 
 .main {
@@ -38,4 +52,25 @@ nav h1 {
 footer {
   font-size: 15px;
   text-align: center;
+}
+
+@keyframes textUnderline {
+  0% {
+    text-decoration: none;
+  }
+  25% {
+    font-style: italic;
+  }
+  50% {
+    text-decoration: none;
+    margin-left: 0;
+  }
+  80% {
+    text-decoration: underline #fff;
+    margin-left: 0;
+  }
+  100% {
+    text-decoration: underline #00cbff;
+    margin-left: 0;
+  }
 }
