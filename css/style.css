@@ -43,7 +43,10 @@ header h1 p:nth-child(2) {
 }
 
 .main {
-  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* position: relative; */
   height: 100vh;
   background-repeat: no-repeat;
   background-image: url(../img/main_runner2.jpg);
@@ -51,6 +54,12 @@ header h1 p:nth-child(2) {
   background-position: center;
   /* filter: blur(2px); */
   background-attachment: scroll;
+}
+
+.main div {
+  height: 30%;
+  width: 10%;
+  background-color: #fff;
 }
 
 footer {
