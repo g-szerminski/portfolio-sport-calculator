@@ -23,7 +23,6 @@ header {
 header h1 {
   position: relative;
   text-transform: uppercase;
-  font-size: 200%;
   color: #fff;
   top: 50%;
   left: 50%;
@@ -34,7 +33,7 @@ header h1 {
 }
 
 header h1 p:nth-child(1) {
-  animation: textUnderline 3s forwards;
+  animation: textUnderline 2s forwards;
   margin-left: -150%;
 }
 header h1 p:nth-child(2) {
@@ -46,8 +45,9 @@ header h1 p:nth-child(2) {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* position: relative; */
-  height: 100vh;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-image: url(../img/main_runner2.jpg);
   background-size: cover;
@@ -56,12 +56,20 @@ header h1 p:nth-child(2) {
   background-attachment: scroll;
 }
 
-.main div {
-  height: 30%;
-  width: 10%;
-  background-color: #fff;
+.row-1,
+.row-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* background-color: #888; */
+  width: 100%;
+  height: 50%;
 }
-
+.row-1 div {
+  background-color: #fff;
+  height: 25%;
+  width: 30%;
+}
 footer {
   font-size: 15px;
   text-align: center;
@@ -71,20 +79,23 @@ footer {
   0% {
     text-decoration: none;
     font-style: italic;
+    font-size: 100%;
   }
   50% {
     text-decoration: none;
     margin-left: 0;
     transform: rotateX(360deg);
+    font-size: 100%;
   }
   80% {
     text-decoration: underline #fff;
     margin-left: 0;
-    transform: scale(1.4);
+    transform: scale(1.5);
   }
   100% {
     text-decoration: underline #00cbff;
     margin-left: 0;
     transform: rotateX(360deg);
+    font-size: 150%;
   }
 }
