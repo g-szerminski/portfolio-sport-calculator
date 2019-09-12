@@ -6,14 +6,12 @@
   box-sizing: border-box;
 }
 body {
-  /* background-color: #555; */
   font-family: arial, sans-serif;
   height: 100vh;
 }
 
 header {
   position: relative;
-  /* position: fixed; */
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   height: 18%;
@@ -67,20 +65,32 @@ header h1 p:nth-child(2) {
 .main div {
   height: 40%;
   width: 30%;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
 }
 
-.main div h3 {
-  background-color: rgba(0, 0, 0, 0.8);
+.main h3,
+.main p {
+  background-color: rgba(0, 0, 0, 1);
   color: #fff;
   padding: 4px;
+}
+
+.main h3 {
+  text-transform: uppercase;
+}
+
+.main p {
+  color: #00cbff;
+  border-bottom: 1px solid #00cbff;
 }
 
 footer {
   height: 2%;
   font-size: 15px;
   text-align: center;
+  background-color: #000;
+  color: #ccc;
 }
 
 @keyframes textUnderline {
