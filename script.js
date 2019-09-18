@@ -1,13 +1,20 @@
-const btn = document.querySelector(".btn");
+const btn = document.querySelectorAll(".btn");
+const button = document.querySelectorAll("button");
 
-const changeClassActive = () => {
-  if (btn.classList.contains("active")) {
-    btn.classList.toggle("active");
-  }
-  btn.classList.toggle("active");
-};
-
-btn.addEventListener("click", changeClassActive);
+// const changeClassActive = () => {
+//   if (btn.classList.contains("active")) {
+//     btn.classList.toggle("active");
+//   }
+//   btn.classList.toggle("active");
+// };
+// btn.addEventListener("click", changeClassActive);
+btn.forEach(item => {
+  // item.className = "btn";
+  const changeClassActive = () => {
+    item.classList.toggle("active");
+  };
+  item.addEventListener("click", changeClassActive);
+});
 
 // const aboutBmiButton = document.querySelector(".aboutBmiButton");
 // const checkBmiButton = document.querySelector(".checkBmiButton");
@@ -23,5 +30,5 @@ btn.addEventListener("click", changeClassActive);
 //   }
 //   checkBmiButton.classList.toggle("active");
 // };
-// aboutBmiButton.addEventListener("click", changeClassActive);
-// checkBmiButton.addEventListener("click", changeClassActive);
+// aboutBmiButton.addEventListener("click", aboutBmi);
+// checkBmiButton.addEventListener("click", checkYourBmi);
