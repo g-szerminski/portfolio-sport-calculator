@@ -1,34 +1,17 @@
 const btn = document.querySelectorAll(".btn");
-const button = document.querySelectorAll("button");
+// const arr = Array.from(document.querySelectorAll(".btn"));
 
-// const changeClassActive = () => {
-//   if (btn.classList.contains("active")) {
-//     btn.classList.toggle("active");
-//   }
-//   btn.classList.toggle("active");
-// };
-// btn.addEventListener("click", changeClassActive);
 btn.forEach(item => {
-  // item.className = "btn";
   const changeClassActive = () => {
-    item.classList.toggle("active");
+    if (item.classList.contains("active")) {
+      item.classList.remove("active");
+    } else {
+      btn.forEach(item => {
+        const removeActive = () => item.classList.remove("active");
+        removeActive();
+      });
+      item.classList.add("active");
+    }
   };
   item.addEventListener("click", changeClassActive);
 });
-
-// const aboutBmiButton = document.querySelector(".aboutBmiButton");
-// const checkBmiButton = document.querySelector(".checkBmiButton");
-// const aboutBmi = () => {
-//   if (checkBmiButton.classList.contains("active")) {
-//     checkBmiButton.classList.toggle("active");
-//   }
-//   aboutBmiButton.classList.toggle("active");
-// };
-// const checkYourBmi = () => {
-//   if (aboutBmiButton.classList.contains("active")) {
-//     aboutBmiButton.classList.toggle("active");
-//   }
-//   checkBmiButton.classList.toggle("active");
-// };
-// aboutBmiButton.addEventListener("click", aboutBmi);
-// checkBmiButton.addEventListener("click", checkYourBmi);
