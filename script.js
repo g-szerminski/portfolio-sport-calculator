@@ -1,6 +1,5 @@
 const btn = document.querySelectorAll(".btn");
 // const arr = Array.from(document.querySelectorAll(".btn"));
-
 btn.forEach(item => {
   const changeClassActive = () => {
     if (item.classList.contains("active")) {
@@ -13,5 +12,11 @@ btn.forEach(item => {
       item.classList.add("active");
     }
   };
+
   item.addEventListener("click", changeClassActive);
 });
+
+class Calculator {
+  constructor() {}
+  showAbout() {}
+}
