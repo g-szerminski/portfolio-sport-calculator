@@ -62,17 +62,20 @@ header h1 p:nth-child(2) {
   align-items: center;
   height: calc(100% - 120px);
 }
-.main .activeCalculator {
-  display: none;
+.main .activeCalc {
   position: absolute;
-  width: 70%;
-  height: 50%;
+  width: 0;
+  height: 0;
   background-color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 1s;
 }
+.main .activeCalc .h2 {
+  text-decoration: underline #00cbff;
+}
+
 .main div {
   /* display: flex;
   flex-direction: column; */
@@ -118,9 +121,9 @@ header h1 p:nth-child(2) {
 .btn:focus {
   color: #fff;
   background: #000;
-  /* outline: 0; */
   outline-color: #fff;
-  padding: 10px 6px;
+  /* padding: 10px 6px; */
+  /* outline: 0; */
 }
 
 footer {
