@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Sport Calculator</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/popup.css" />
     <meta
       name="description"
       content="Sport calculator - an aplication which calculate your bmi, check your max heart rate, calculate your pace, register your activity and help to control your weight. Check how easy it is !"
@@ -40,6 +41,7 @@
     <meta property="og:type" content="article" />
   </head>
   <body>
+    <div class="visuallyhidden"></div>
     <div class="wrapper">
       <header>
         <h1>
@@ -48,7 +50,10 @@
         </h1>
       </header>
       <div class="main">
-        <div class="activeCalc"><h2 class="h2"></h2></div>
+        <div class="activeCalc">
+          <span class="close">&times;</span>
+          <h2 class="h2"></h2>
+        </div>
         <div class="bmi">
           <h3>BMI</h3>
           <p>check you body mass index</p>

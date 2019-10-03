@@ -2,6 +2,9 @@ const btn = document.querySelectorAll(".btn");
 const button = document.querySelector("button");
 const activeCalc = document.querySelector(".activeCalc");
 const h2 = document.querySelector(".h2");
+const visuallyhidden = document.querySelector(".visuallyhidden");
+const close = document.querySelector(".close");
+
 // const arr = Array.from(document.querySelectorAll(".btn"));
 
 btn.forEach(item => {
@@ -17,14 +20,19 @@ btn.forEach(item => {
       item.classList.add("active");
       activeCalc.style.width = 55 + "%";
       activeCalc.style.height = 40 + "%";
+      close.style.visibility = "visible";
+
+      // if (item.classList.contains("active"))
+      visuallyhidden.classList.add("popup-overlay");
+
       setTimeout(() => (h2.textContent = item.textContent), 200);
       activeCalc.addEventListener("click", function() {
         activeCalc.style.width = 0;
         activeCalc.style.height = 0;
+        close.style.visibility = "hidden";
         h2.textContent = "";
         item.classList.remove("active");
-        // activeCalc.style.display = "block";
-        // activeCalc.setAttribute("target", "_blank");
+        visuallyhidden.classList.remove("popup-overlay");
       });
     }
   };
