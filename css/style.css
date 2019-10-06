@@ -51,8 +51,8 @@ header h1 p:nth-child(2) {
   background-image: url(../img/main_runner2.jpg);
   background-size: cover;
   background-position: center;
-  /* filter: blur(2px); */
   background-attachment: scroll;
+  /* filter: blur(2px); */
 }
 
 .main {
@@ -112,6 +112,7 @@ header h1 p:nth-child(2) {
 /* .btn:active {
   color: red;
 } */
+
 .btn:hover {
   background-color: #000;
   color: #fff;
