@@ -3,35 +3,38 @@ const activeCalc = document.querySelector(".activeCalc");
 const popupHeader = document.querySelector(".popupHeader");
 const darkBackground = document.querySelector(".darkBackground");
 const close = document.querySelector(".close");
-let popupContent = document.querySelector(".popupContent");
+const popupContent = document.querySelector(".popupContent");
 
 btn.forEach(item => {
-  const changeClassActive = () => {
-    if (item.classList.contains("active")) {
-      item.classList.remove("active");
-    }
-    const popupClose = () => {
-      activeCalc.style.width = 0;
-      activeCalc.style.height = 0;
-      close.style.visibility = "hidden";
-      popupContent.style.visibility = "hidden";
-      popupHeader.textContent = "";
-      item.classList.remove("active");
-      darkBackground.classList.remove("popup-overlay");
-    };
-
-    item.classList.add("active");
+  const popupDisplay = () => {
     activeCalc.style.width = 40 + "%";
     activeCalc.style.height = 40 + "%";
     close.style.visibility = "visible";
-    darkBackground.classList.add("popup-overlay");
     popupContent.style.visibility = "visible";
-    setTimeout(() => (popupHeader.textContent = item.textContent), 200);
-    close.addEventListener("click", popupClose);
-    darkBackground.addEventListener("click", popupClose);
+    // item.classList.add("active");
+    darkBackground.classList.add("popup-overlay");
+    setTimeout(() => (popupHeader.textContent = item.textContent), 1000);
+  };
+  const popupClose = () => {
+    activeCalc.style.width = 0;
+    activeCalc.style.height = 0;
+    close.style.visibility = "hidden";
+    popupContent.style.visibility = "hidden";
+    popupHeader.textContent = "";
+    item.classList.remove("active");
+    darkBackground.classList.remove("popup-overlay");
+  };
+  const changeBtnActive = () => {
+    if (item.classList.contains("active")) {
+      item.classList.remove("active");
+    }
+    item.classList.add("active");
   };
 
-  item.addEventListener("click", changeClassActive);
+  item.addEventListener("click", changeBtnActive);
+  item.addEventListener("click", popupDisplay);
+  close.addEventListener("click", popupClose);
+  darkBackground.addEventListener("click", popupClose);
 });
 
 // class Calculator {
