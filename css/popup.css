@@ -7,11 +7,25 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
   transition: 0.5s;
 }
 
-.close {
+.popup {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-image: linear-gradient(#aaa9a9, #fff);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+}
+.popupDisplay {
+  width: 40%;
+  height: 40%;
+}
+
+.popupClose {
   position: absolute;
   right: -13px;
   top: -13px;
@@ -25,9 +39,21 @@
   font-size: 20px;
   width: 30px;
   height: 30px;
-  z-index: 10;
   visibility: hidden;
 }
+
+.popupHeader {
+  visibility: hidden;
+  /* text-decoration: underline #00cbff; */
+  border-bottom: 2px solid #00cbff;
+  text-align: center;
+}
+
 .popupContent {
   visibility: hidden;
+  text-align: center;
+  color: red;
+}
+.show {
+  visibility: visible;
 }

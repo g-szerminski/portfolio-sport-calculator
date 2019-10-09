@@ -11,25 +11,15 @@
       name="description"
       content="Sport calculator - an aplication which calculate your bmi, check your max heart rate, calculate your pace, register your activity and help to control your weight. Check how easy it is !"
     />
-
-    <!--  Mało ważny meta znacznik (słowa kluczowe) z punktu widzenia pozycjonowania czy dostępności, ale jednak może się znaleźć na stronie -->
     <meta
       name="keywords"
       content="sport, bmi, heart rate, pace counting, activity register, weight control"
     />
-
-    <!--  Zaproszenie robotów wyszukiwarek do indeksowania (nie musimy dodawać, bo jest domyślnie, ale możemy) -->
     <meta name="robots" content="index,follow" />
-
-    <!--   32 x 32 W tym przypadku w folderze głównym -->
     <link rel="icon" href="favicons/tracking16.png" />
     <link rel="icon" href="favicons/tracking32.png" />
-    <!-- <link rel="icon" href="favicons/tracking.svg" /> -->
-
-    <!--  Dodaj też (dla starych przeglądarek) favicon.ico w rozmiarze 16x16 też w katalogu głównym -->
 
     <!--  Meta tagi na na FB - wypłenij swoimi treściami -->
-
     <meta name="url" content="http://nazwadomenty.pl" />
     <meta property="og:title" content="Best sport calculator" />
     <meta property="og:image" content="http://nazwadomeny.pl/img/fbook.png" />
@@ -50,36 +40,36 @@
         </h1>
       </header>
       <div class="main">
-        <div class="activeCalc">
-          <span class="close">&times;</span>
+        <div class="popup">
+          <span class="popupClose">&times;</span>
           <h2 class="popupHeader"></h2>
-          <p class="popupContent">P content</p>
+          <p class="popupContent"></p>
         </div>
-        <div class="bmi">
+        <div class="calculator bmi">
           <h3>BMI</h3>
           <p>check you body mass index</p>
           <button class="btn aboutBmiButton">About BMI</button>
           <button class="btn checkBmiButton">Check your BMI</button>
         </div>
-        <div class="hrMax">
+        <div class="calculator hrMax">
           <h3>Hr Max</h3>
           <p>calculate your heart rate</p>
           <button class="btn">About hr max</button>
           <button class="btn">Check your hr max</button>
         </div>
-        <div class="weightMonitor">
+        <div class="calculator weightMonitor">
           <h3>Weight Monitor</h3>
           <p>save your weight and control the progress</p>
         </div>
-        <div class="checkFluidLoss">
+        <div class="calculator checkFluidLoss">
           <h3>Check fluid loss</h3>
           <p>check the percentage of weight loss after training</p>
         </div>
-        <div class="cooperTest">
+        <div class="calculator cooperTest">
           <h3>Cooper Test</h3>
           <p>check your condition in the Cooper Test</p>
         </div>
-        <div class="distancePace">
+        <div class="calculator distancePace">
           <h3>Distance Pace</h3>
           <p>
             check what pace you should keep to cover the distance in a given
