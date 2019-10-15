@@ -1,4 +1,5 @@
 const btn = document.querySelectorAll(".btn");
+const calculator = document.querySelectorAll(".calculator");
 const popup = document.querySelector(".popup");
 const popupHeader = document.querySelector(".popupHeader");
 const darkBackground = document.querySelector(".darkBackground");
@@ -11,26 +12,40 @@ class Calculator {
     this.about = about;
     this.data = data;
   }
-  popupDisplay() {
+
+  popupDisplay = () => {
     popup.classList.add("popupDisplay");
     popupHeader.classList.add("show");
     popupContent.classList.add("show");
     popupClose.classList.add("show");
     darkBackground.classList.add("popup-overlay");
-    popupHeader.textContent = this.textContent;
-    popupContent.textContent = this.textContent;
+    // popupHeader.textContent = this.textContent;
+    // popupContent.textContent = this.textContent;
     popupClose.addEventListener("click", popupHide);
     darkBackground.addEventListener("click", popupHide);
-  }
+    // return (
+    //   (popupHeader.textContent = this.name),
+    //   (popupContent.textContent = this.about)
+    // );
+  };
+
   pushData(addData) {
     this.data.push(addData);
   }
 }
-const bmi = new Calculator("name: bmi", "about bmiiiiiiii", "0000");
-const hrMax = new Calculator("name: hrMax", "about hrMaxxxxxxxxx", "1111");
+const bmi = new Calculator("bmi", "about bmiiiiiiii", "0000");
+const hrMax = new Calculator("hrMax", "about hrMaxxxxxxxxx", "1111");
+
+const addContent = () => {
+  return (
+    (popupHeader.textContent = this.name),
+    (popupContent.textContent = this.about)
+  );
+};
 
 btn.forEach(function(item) {
   item.addEventListener("click", bmi.popupDisplay);
+  item.addEventListener("click", this.addContent);
 });
 {
   //----------------------------------------------------------
