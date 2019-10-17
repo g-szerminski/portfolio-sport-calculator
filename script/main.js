@@ -13,40 +13,37 @@ class Calculator {
     this.data = data;
   }
 
-  popupDisplay = () => {
+  popupDisplay() {
     popup.classList.add("popupDisplay");
     popupHeader.classList.add("show");
     popupContent.classList.add("show");
     popupClose.classList.add("show");
     darkBackground.classList.add("popup-overlay");
-    // popupHeader.textContent = this.textContent;
-    // popupContent.textContent = this.textContent;
+    popupHeader.textContent = this.textContent;
+    popupContent.textContent = this.textContent;
     popupClose.addEventListener("click", popupHide);
     darkBackground.addEventListener("click", popupHide);
-    // return (
-    //   (popupHeader.textContent = this.name),
-    //   (popupContent.textContent = this.about)
-    // );
-  };
-
+  }
+  buttonListen() {
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].addEventListener("click", this.popupDisplay);
+      console.log("działa");
+      console.log(this);
+    }
+  }
   pushData(addData) {
     this.data.push(addData);
   }
 }
+
 const bmi = new Calculator("bmi", "about bmiiiiiiii", "0000");
 const hrMax = new Calculator("hrMax", "about hrMaxxxxxxxxx", "1111");
+bmi.buttonListen();
+// btn.forEach(function(item) {
+//   item.addEventListener("click", bmi.popupDisplay);
+//   console.log(this);
+// });
 
-const addContent = () => {
-  return (
-    (popupHeader.textContent = this.name),
-    (popupContent.textContent = this.about)
-  );
-};
-
-btn.forEach(function(item) {
-  item.addEventListener("click", bmi.popupDisplay);
-  item.addEventListener("click", this.addContent);
-});
 {
   //----------------------------------------------------------
   // const changeClassActive = function() {
