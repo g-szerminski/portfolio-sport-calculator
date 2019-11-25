@@ -11,6 +11,7 @@ class Calculator {
     this.name = name;
     this.about = about;
     this.data = data;
+    // this.buttonListen = buttonListen;
   }
 
   popupDisplay() {
@@ -19,8 +20,8 @@ class Calculator {
     popupContent.classList.add("show");
     popupClose.classList.add("show");
     darkBackground.classList.add("popup-overlay");
-    popupHeader.textContent = this.name;
-    popupContent.textContent = this.about;
+    popupHeader.textContent = this.textContent;
+    popupContent.textContent = this.textContent;
     popupClose.addEventListener("click", popupHide);
     darkBackground.addEventListener("click", popupHide);
   }
@@ -34,9 +35,9 @@ class Calculator {
   pushData(addData) {
     this.data.push(addData);
   }
-  render() {
-    "calculator";
-  }
+  // render() {
+  //   "calculator";
+  // }
 }
 
 const bmi = new Calculator("bmi", "about bmiiiiiiii", "0000");
