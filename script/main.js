@@ -11,38 +11,24 @@ class Calculator {
     this.name = name;
     this.about = about;
     this.data = data;
-    // this.buttonListen = buttonListen;
+    btn.forEach(item => {
+      item.addEventListener("click", popupShow.bind(this));
+    });
   }
 
-  popupDisplay() {
-    popup.classList.add("popupDisplay");
-    popupHeader.classList.add("show");
-    popupContent.classList.add("show");
-    popupClose.classList.add("show");
-    darkBackground.classList.add("popup-overlay");
-    popupHeader.textContent = this.textContent;
-    popupContent.textContent = this.textContent;
-    popupClose.addEventListener("click", popupHide);
-    darkBackground.addEventListener("click", popupHide);
-  }
-  buttonListen() {
-    for (let i = 0; i < btn.length; i++) {
-      btn[i].addEventListener("click", this.popupDisplay);
-      console.log("działa");
-      // console.log(this);
-    }
-  }
+  // buttonListen() {
+  //   btn.forEach(item => {
+  //     item.addEventListener("click", this.popupShow);
+  //   });
+  // }
+
   pushData(addData) {
     this.data.push(addData);
+    return this.data;
   }
-  // render() {
-  //   "calculator";
-  // }
 }
-
-const bmi = new Calculator("bmi", "about bmiiiiiiii", "0000");
-const hrMax = new Calculator("hrMax", "about hrMaxxxxxxxxx", "1111");
-bmi.buttonListen();
+const bmi = new Calculator("bmi", "about bmiiiiii", "0000");
+const hrMax = new Calculator("hrMax", "about hrmaxxxxxxx", "1111");
 
 {
   //----------------------------------------------------------
@@ -101,4 +87,10 @@ bmi.buttonListen();
   //     darkBackground.classList.remove("popup-overlay");
   //   };
   //---------------------------------------------
+  // buttonListen() {
+  //   for (let i = 0; i < btn.length; i++) {
+  //     btn[i].addEventListener("click", this.popupDisplay);
+  //     console.log("działa");
+  //     // console.log(this);
+  //   }
 }

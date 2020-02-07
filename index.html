@@ -1,99 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sport Calculator</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/popup.css" />
-    <meta
-      name="description"
-      content="Sport calculator - an aplication which calculate your bmi, check your max heart rate, calculate your pace, register your activity and help to control your weight. Check how easy it is !"
-    />
-    <meta
-      name="keywords"
-      content="sport, bmi, heart rate, pace counting, activity register, weight control"
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="icon" href="favicons/tracking16.png" />
-    <link rel="icon" href="favicons/tracking32.png" />
 
-    <!--  Meta tagi na na FB - wypłenij swoimi treściami -->
-    <meta name="url" content="http://nazwadomenty.pl" />
-    <meta property="og:title" content="Best sport calculator" />
-    <meta property="og:image" content="http://nazwadomeny.pl/img/fbook.png" />
-    <!--Obrazek w rozmairze 1200px na 640px fb. Umeiść obrazke zgodnie ze ścieżką powyzej-->
-    <meta
-      property="og:description"
-      content="Sport calculator for better motivation"
-    />
-    <meta property="og:type" content="article" />
-  </head>
-  <body>
-    <div class="darkBackground"></div>
-    <div class="wrapper">
-      <header>
-        <h1>
-          <p>sport<span></span></p>
-          <p>calculator<span></span></p>
-        </h1>
-      </header>
-      <div class="main">
-        <div class="popup">
-          <span class="popupClose">&times;</span>
-          <h2 class="popupHeader"></h2>
-          <p class="popupContent"></p>
-        </div>
-        <div class="calculator bmi">
-          <h3>BMI</h3>
-          <p>check you body mass index</p>
-          <button class="btn aboutBmiButton">About BMI</button>
-          <button class="btn checkBmiButton">Check your BMI</button>
-        </div>
-        <div class="calculator hrMax">
-          <h3>Hr Max</h3>
-          <p>calculate your heart rate</p>
-          <button class="btn">About hr max</button>
-          <button class="btn">Check your hr max</button>
-        </div>
-        <div class="calculator weightMonitor">
-          <h3>Weight Monitor</h3>
-          <p>save your weight and control the progress</p>
-        </div>
-        <div class="calculator checkFluidLoss">
-          <h3>Check fluid loss</h3>
-          <p>check the percentage of weight loss after training</p>
-        </div>
-        <div class="calculator cooperTest">
-          <h3>Cooper Test</h3>
-          <p>check your condition in the Cooper Test</p>
-        </div>
-        <div class="calculator distancePace">
-          <h3>Distance Pace</h3>
-          <p>
-            check what pace you should keep to cover the distance in a given
-            time
-          </p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sport Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/popup.css" />
+  <meta name="description"
+    content="Sport calculator - an aplication which calculate your bmi, check your max heart rate, calculate your pace, register your activity and help to control your weight. Check how easy it is !" />
+  <meta name="keywords" content="sport, bmi, heart rate, pace counting, activity register, weight control" />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="favicons/tracking16.png" />
+  <link rel="icon" href="favicons/tracking32.png" />
+
+  <!--  Meta tagi na na FB - wypłenij swoimi treściami -->
+  <meta name="url" content="http://nazwadomenty.pl" />
+  <meta property="og:title" content="Best sport calculator" />
+  <meta property="og:image" content="http://nazwadomeny.pl/img/fbook.png" />
+  <!--Obrazek w rozmairze 1200px na 640px fb. Umeiść obrazke zgodnie ze ścieżką powyzej-->
+  <meta property="og:description" content="Sport calculator for better motivation" />
+  <meta property="og:type" content="article" />
+</head>
+
+<body>
+  <div class="darkBackground"></div>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <p>sport<span></span></p>
+        <p>calculator<span></span></p>
+      </h1>
+    </header>
+    <div class="main">
+      <div class="popup">
+        <span class="popupClose">&times;</span>
+        <h2 class="popupHeader"></h2>
+        <p class="popupContent"></p>
       </div>
-      <!-- <img src="./img/main_runner.jpg" alt="runner"> -->
+      <div class="calculator bmi">
+        <h3>BMI</h3>
+        <p>check you body mass index</p>
+        <button class="btn aboutBmiButton">About BMI</button>
+        <button class="btn checkBmiButton">Check your BMI</button>
+      </div>
+      <div class="calculator hrMax">
+        <h3>Hr Max</h3>
+        <p>calculate your heart rate</p>
+        <button class="btn">About hr max</button>
+        <button class="btn">Check your hr max</button>
+      </div>
+      <div class="calculator weightMonitor">
+        <h3>Weight Monitor</h3>
+        <p>save your weight and control the progress</p>
+      </div>
+      <div class="calculator checkFluidLoss">
+        <h3>Check fluid loss</h3>
+        <p>check the percentage of weight loss after training</p>
+      </div>
+      <div class="calculator cooperTest">
+        <h3>Cooper Test</h3>
+        <p>check your condition in the Cooper Test</p>
+      </div>
+      <div class="calculator distancePace">
+        <h3>Distance Pace</h3>
+        <p>
+          check what pace you should keep to cover the distance in a given
+          time
+        </p>
+      </div>
     </div>
+    <!-- <img src="./img/main_runner.jpg" alt="runner"> -->
+  </div>
 
-    <footer class="footer">
-      <div>
-        Icons made by
-        <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a>
-        from
-        <a href="https://www.flaticon.com/" title="Flaticon"
-          >www.flaticon.com</a
-        >
-      </div>
-    </footer>
+  <footer class="footer">
+    <div>
+      Icons made by
+      <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a>
+      from
+      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </div>
+  </footer>
 
-    <script src="script/temp.js"></script>
-    <script src="script/popupHide.js"></script>
-    <script src="script/Calculator.js"></script>
-    <script src="script/main.js"></script>
-  </body>
+  <script src="script/temp.js"></script>
+  <script src="script/popupDisplay.js"></script>
+  <script src="script/Calculator.js"></script>
+  <script src="script/main.js"></script>
+</body>
+
 </html>
