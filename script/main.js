@@ -1,4 +1,4 @@
-const btn = document.querySelectorAll(".btn");
+const btn = document.querySelector(".btn");
 const calculator = document.querySelector(".calculator");
 const popup = document.querySelector(".popup");
 const popupHeader = document.querySelector(".popupHeader");
@@ -11,10 +11,12 @@ class Calculator {
     this.name = name;
     this.about = about;
     this.data = data;
-    btn.forEach(item => {
-      item.addEventListener("click", popupShow.bind(this));
-    });
+    // btn.forEach(item => {
+    //   item.addEventListener("click", popupShow.bind(this));
+    // });
+    btn.addEventListener("click", popupShow.bind(this));
   }
+  // btn.addEventListener("click", popupShow);
 
   // buttonListen() {
   //   btn.forEach(item => {
@@ -27,8 +29,8 @@ class Calculator {
     return this.data;
   }
 }
-const bmi = new Calculator("bmi", "about bmiiiiii", "0000");
 const hrMax = new Calculator("hrMax", "about hrmaxxxxxxx", "1111");
+const bmi = new Calculator("bmi", "about bmiiiiii", "0000");
 
 {
   //----------------------------------------------------------
