@@ -18,7 +18,7 @@ class Calculator {
 
   // buttonListen() {
   //   btn.forEach(item => {
-  //     item.addEventListener("click", this.popupShow);
+  //     item.addEventListener("click", popupShow);
   //   });
   // }
 

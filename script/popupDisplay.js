@@ -15,8 +15,8 @@ function popupShow() {
   popupContent.classList.add("show");
   popupClose.classList.add("show");
   darkBackground.classList.add("popup-overlay");
-  // popupHeader.textContent = this.name;
-  // popupContent.textContent = this.about;
+  popupHeader.textContent = this.name;
+  popupContent.textContent = this.about;
   popupClose.addEventListener("click", popupHide);
   darkBackground.addEventListener("click", popupHide);
   return this.name;
