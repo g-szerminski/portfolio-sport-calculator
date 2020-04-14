@@ -11,35 +11,21 @@ class Calculator {
     this.name = name;
     this.about = about;
     this.data = data;
-    // btn.addEventListener("click", popupShow.bind(this));
-    btn.forEach(item => {
-      item.addEventListener("click", popupShow.bind(this));
-    });
+    this.buttonListen();
   }
 
-  // btn.addEventListener("click", popupShow);
-
-  // buttonListen() {
-  //   btn.forEach(item => {
-  //     item.addEventListener("click", popupShow);
-  //     console.log(this);
-  //   });
-  // }
-
-// buttonListen() {
-//       btn.addEventListener("click", popupShow);
-//     };
+  buttonListen() {
+    btn.forEach(item => {
+      item.addEventListener("click", popupShow.bind(this));
+      console.log(this.name);
+    });
+  }
   
-
   pushData(addData) {
     this.data.push(addData);
     return this.data;
   }
 }
-// btn.forEach(item => {
-//       item.addEventListener("click", popupShow);
-//       console.log(this)
-//     });
 
 const hrMax = new Calculator("hrMax", "about hrmaxxxxxxx", "1111");
 const bmi = new Calculator("bmi", "about bmiiiiii", "0000");

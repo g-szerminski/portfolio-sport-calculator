@@ -10,19 +10,19 @@ function popupHide() {
   darkBackground.classList.remove("popup-overlay");
 }
 
-function popupShow() {
+function popupShow(e) {
   popup.classList.add("popupDisplay");
   popupHeader.classList.add("show");
   popupContent.classList.add("show");
   popupClose.classList.add("show");
   darkBackground.classList.add("popup-overlay");
-  popupHeader.textContent = this.name;
+  popupHeader.textContent = e.target.textContent;
   popupContent.textContent = this.about;
   popupClose.addEventListener("click", popupHide);
   darkBackground.addEventListener("click", popupHide);
   console.log(this.data);
   console.log(this);
-  return this.name;
+  
 }
 
 // const popupShow = () => {
@@ -38,3 +38,9 @@ function popupShow() {
 //   console.log(this);
 //   return this.name;
 // };
+function dodaj(liczba1, liczba2) {
+  var wynik = liczba1 + liczba2;
+  return wynik;
+  // return liczba1 + liczba2;
+}
+const wynik = dodaj(4, 5)
