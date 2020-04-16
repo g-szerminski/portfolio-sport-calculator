@@ -5,6 +5,8 @@ const popupHeader = document.querySelector(".popupHeader");
 const darkBackground = document.querySelector(".darkBackground");
 const popupClose = document.querySelector(".popupClose");
 const popupContent = document.querySelector(".popupContent");
+let bmi = document.querySelector('bmi');
+let hrmax = document.querySelector('hrmax')
 
 class Calculator {
   constructor(name, about, ...data) {
@@ -14,12 +16,35 @@ class Calculator {
     this.buttonListen();
   }
 
+  // buttonListen() {
+  //   btn.forEach(item => {
+  //     item.addEventListener("click", popupShow.bind(this));
+  //     console.log(this);
+  //   });
   buttonListen() {
-    btn.forEach(item => {
-      item.addEventListener("click", popupShow.bind(this));
-      console.log(this.name);
-    });
+    // debugger;
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].addEventListener("click", popupShow.bind(this));
+      console.log("działa");
+
+    }
+
+    function popupShow(e) {
+      popup.classList.add("popupDisplay");
+      popupHeader.classList.add("show");
+      popupContent.classList.add("show");
+      popupClose.classList.add("show");
+      darkBackground.classList.add("popup-overlay");
+      popupHeader.textContent = e.target.textContent;
+      popupContent.textContent = this.about;
+      popupClose.addEventListener("click", popupHide);
+      darkBackground.addEventListener("click", popupHide);
+      e.stopPropagation();
+      console.log(this);
+      return popupContent.textContent;
+    }
   }
+
   
   pushData(addData) {
     this.data.push(addData);
@@ -27,8 +52,8 @@ class Calculator {
   }
 }
 
-const hrMax = new Calculator("hrMax", "about hrmaxxxxxxx", "1111");
-const bmi = new Calculator("bmi", "about bmiiiiii", "0000");
+hrMax = new Calculator("hrMax", "about hrmax", "1111");
+bmi = new Calculator("bmi", "about bmi", "0000");
 
 {
   //----------------------------------------------------------

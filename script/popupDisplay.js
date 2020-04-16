@@ -10,20 +10,21 @@ function popupHide() {
   darkBackground.classList.remove("popup-overlay");
 }
 
-function popupShow(e) {
-  popup.classList.add("popupDisplay");
-  popupHeader.classList.add("show");
-  popupContent.classList.add("show");
-  popupClose.classList.add("show");
-  darkBackground.classList.add("popup-overlay");
-  popupHeader.textContent = e.target.textContent;
-  popupContent.textContent = this.about;
-  popupClose.addEventListener("click", popupHide);
-  darkBackground.addEventListener("click", popupHide);
-  console.log(this.data);
-  console.log(this);
+// function popupShow(e) {
+//   popup.classList.add("popupDisplay");
+//   popupHeader.classList.add("show");
+//   popupContent.classList.add("show");
+//   popupClose.classList.add("show");
+//   darkBackground.classList.add("popup-overlay");
+//   popupHeader.textContent = e.target.textContent;
+//   popupContent.textContent = about;
+//   popupClose.addEventListener("click", popupHide);
+//   darkBackground.addEventListener("click", popupHide);
+//   console.log(this.data);
+//   console.log(this);
+//   return popupContent.textContent
   
-}
+// }
 
 // const popupShow = () => {
 //   popup.classList.add("popupDisplay");
@@ -44,3 +45,5 @@ function dodaj(liczba1, liczba2) {
   // return liczba1 + liczba2;
 }
 const wynik = dodaj(4, 5)
+
+const lokacja = window.location
