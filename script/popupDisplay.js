@@ -3,11 +3,11 @@ function popupHide() {
   popupHeader.classList.remove("show");
   popupContent.classList.remove("show");
   popupClose.classList.remove("show");
+  btn.forEach(item => item.classList.remove("active"));
+  darkBackground.classList.remove("popup-overlay");
   // popupHeader.textContent = "";
   // popupContent.textContent = "";
-  btn.forEach(item => item.classList.remove("active"));
   // btn.classList.remove("active");
-  darkBackground.classList.remove("popup-overlay");
 }
 
 // function popupShow(e) {
