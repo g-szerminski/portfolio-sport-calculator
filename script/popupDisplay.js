@@ -3,12 +3,24 @@ function popupHide() {
   popupHeader.classList.remove("show");
   popupContent.classList.remove("show");
   popupClose.classList.remove("show");
-  btn.forEach(item => item.classList.remove("active"));
+  btn.forEach((item) => item.classList.remove("active"));
   darkBackground.classList.remove("popup-overlay");
-  // popupHeader.textContent = "";
-  // popupContent.textContent = "";
-  // btn.classList.remove("active");
 }
+
+// function popupShow(e) {
+//   popup.classList.add("popupDisplay");
+//   popupHeader.classList.add("show");
+//   popupContent.classList.add("show");
+//   popupClose.classList.add("show");
+//   darkBackground.classList.add("popup-overlay");
+//   popupHeader.textContent = e.target.textContent;
+//   popupContent.textContent = this.about;
+//   popupClose.addEventListener("click", popupHide);
+//   darkBackground.addEventListener("click", popupHide);
+//   console.log(this);
+//   // e.stopPropagation();
+//   // return popupContent.textContent;
+// }
 
 // function popupShow(e) {
 //   popup.classList.add("popupDisplay");
@@ -22,8 +34,7 @@ function popupHide() {
 //   darkBackground.addEventListener("click", popupHide);
 //   console.log(this.data);
 //   console.log(this);
-//   return popupContent.textContent
-  
+//   return popupContent.textContent;
 // }
 
 // const popupShow = () => {
@@ -39,11 +50,11 @@ function popupHide() {
 //   console.log(this);
 //   return this.name;
 // };
-function dodaj(liczba1, liczba2) {
-  var wynik = liczba1 + liczba2;
-  return wynik;
-  // return liczba1 + liczba2;
-}
-const wynik = dodaj(4, 5)
+// function dodaj(liczba1, liczba2) {
+//   var wynik = liczba1 + liczba2;
+//   return wynik;
+//   // return liczba1 + liczba2;
+// }
+// const wynik = dodaj(4, 5);
 
-const lokacja = window.location
+// const lokacja = window.location;

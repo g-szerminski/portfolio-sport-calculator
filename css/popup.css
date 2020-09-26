@@ -27,15 +27,15 @@
 
 .popupClose {
   position: absolute;
-  right: -13px;
-  top: -13px;
+  right: -14px;
+  top: -14px;
   cursor: pointer;
   background-color: #000;
   border: 2px solid #fff;
   border-radius: 50%;
   color: #fff;
   text-align: center;
-  line-height: 26px;
+  line-height: 28px;
   font-size: 20px;
   width: 30px;
   height: 30px;

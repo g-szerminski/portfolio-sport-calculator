@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/g-szerminski/portfolio-sport-calculator/issues"
   },
-  "homepage": "https://github.com/g-szerminski/portfolio-sport-calculator#readme"
+  "homepage": "https://github.com/g-szerminski/portfolio-sport-calculator#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
 }
